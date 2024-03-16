@@ -1,0 +1,97 @@
+:root{
+    --primColor : #282D34;
+    --secColor  :#F1FAFF;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F1FAFF;
+}
+.navbar{
+    background-color: var(--primColor);
+}
+.navbar-brand{
+font-weight: 600;
+font-size: 50px;
+}
+.nav-link{
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-link.active{
+    font-weight: 600;
+}
+.button-prim{
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight:500 ;
+    color: #F1FAFF;
+}
+.button-sec{
+    background:transparent;
+    border: none;
+    font-size: 20px;
+    font-weight:500 ;
+    color:var(--secColor);
+    
+    
+}
+.header{
+    background: transparent;
+    
+}
+.header-img{
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+}
+.search-container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    max-width: 100%;
+    width: 1000px; /* Lebar search bar */
+    margin-top: 20px; /* Jarak antara gambar dan search bar */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+    border: var(--secColor);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family:'Poppins', sans-serif;;
+    font-weight: 300;
+   
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: var(--secColor);
+    border-radius: 0 5px 5px 0;
+    background-color:var(--primColor);
+    cursor: pointer;
+    outline: none;
+    font-family: 'Poppins', sans-serif;;
+    color: #F1FAFF;
+}
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: var(--secColor);
+  }
+  .header h1{
+    font-size: 40px;
+   
+    text-align: center;
+  }
+ 
