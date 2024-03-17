@@ -1,61 +1,73 @@
-:root{
-    --primColor : #282D34;
-    --secColor  :#F1FAFF;
-
-}
-
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #F1FAFF;
+    background-color: black;
 }
-.navbar{
-    background-color: var(--primColor);
+.bg-1{
+    font-family: "Poppins", sans-serif;
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../img/shiraito-waterfall-autumn-japan.jpg');
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: changeBg 20s infinite;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes changeBg {
+    0% { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('../img/adventure.jpg'); } 
+    25% { background-image:linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('../img/racism.jpg'); } 
+    50% { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('../img/shiraito-waterfall-autumn-japan.jpg'); } 
+    75% { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('../img/solidarity-concept-illustration_114360-6286.avif'); } 
+    100% { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),url('../img/desaign.jpg'); }
 }
 .navbar-brand{
-font-weight: 600;
-font-size: 50px;
-}
-.nav-link{
-    font-size: 20px;
-    font-weight: 500;
-}
-.nav-link.active{
     font-weight: 600;
 }
-.button-prim{
-    background: transparent;
+.nav-link{
+    font-size: 16px;
+}
+.nav-link.active{
+    font-weight: 500;
+}
+.but-2{
+    width: 133px;
+    height: 40px;
+    background-color: #F1FAFF;
+    color: black;
     border: none;
-    font-size: 20px;
-    font-weight:500 ;
-    color: #F1FAFF;
+    border-radius: 20px;
+    font-weight: 600;
 }
-.button-sec{
-    background:transparent;
+.but-1{
+    font-weight: 500;
     border: none;
-    font-size: 20px;
-    font-weight:500 ;
-    color:var(--secColor);
-    
-    
-}
-.header{
     background: transparent;
-    
 }
-.header-img{
-    width: 100%;
-    max-width: 1440px;
-    height: auto;
-}
+.welcome-text p{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center;
+    height: 100px;
+    z-index: 1;
+  }
 .search-container {
     position: absolute;
-    top: 30%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     max-width: 100%;
-    width: 1000px; /* Lebar search bar */
-    margin-top: 20px; /* Jarak antara gambar dan search bar */
+    width: 1000px; 
+    margin-top: 20px;
+    z-index: 1;
 }
 
 input[type="text"] {
@@ -69,29 +81,139 @@ input[type="text"] {
     font-weight: 300;
    
 }
-
-button {
+button[type="submit"] {
     padding: 10px 20px;
-    font-size: 16px;
-    border: var(--secColor);
+    background-color: black;
+    color: white;
+    border: none;
     border-radius: 0 5px 5px 0;
-    background-color:var(--primColor);
     cursor: pointer;
-    outline: none;
-    font-family: 'Poppins', sans-serif;;
-    color: #F1FAFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
-.header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    color: var(--secColor);
-  }
-  .header h1{
-    font-size: 40px;
-   
+.pencarian{
+    width: auto;
+    height: 500px;
+    
+}
+.container1 img{
+    width: 120px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transition: transform 0.3s; 
+ }
+
+ .container1 img:hover {
+    transform: scale(1.05); /* Memperbesar gambar sebesar 5% saat kursor berada di atasnya */
+}
+#about{
+    width: 100%;
+    padding: 2.5rem 0;
+}
+.about-container{
+    width: 900px;
+    margin: auto auto;
+}
+.image-gallery{
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    justify-content:space-between;
+    margin-bottom: 2rem;
+}
+.image-box{
+    width: 22%;
+    height: 250px;
+    [position: relative;]
+}
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+.image-box:nth-child(odd){
+    align-self: flex-end;
+}
+.image-box img:hover{
+    transform: scale(1.05);
+}
+.about-info{
+    color: #F1FAFF;
     text-align: center;
-  }
- 
+    font-size: 1rem;
+    font-weight: 400;
+}
+.about-info1{
+    color: #F1FAFF;
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+
+}
+.footer-container{
+    color: #F1FAFF;
+
+}
+footer{
+    background-color: #F1FAFF;
+    box-sizing: border-box;
+}
+.penutup{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+}
+.icon a{
+    text-decoration: none;
+    padding: 20px;
+    background-color: black;
+    margin: 10px;
+    border-radius: 80px;
+
+}
+.icon a i{
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+.icon a:hover{
+    background-color: #F1FAFF;
+    transform: 0.5s;
+}
+.icon a:hover i{
+    color: black;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footer-bottom{
+    background-color: #F1FAFF;
+    padding: 20px;
+    text-align: center;
+}
